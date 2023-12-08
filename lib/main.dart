@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+import 'face_detector_view.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Face Detector'),
+          ),
+          body: FaceDetectorView()),
+    );
+  }
+}
